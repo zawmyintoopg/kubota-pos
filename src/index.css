@@ -54,3 +54,278 @@ a {
 .eng {
   font-family: "Fraunces", serif;
 }
+
+/* =========================================================
+   PREMIUM WEBSITE ANIMATIONS
+   ========================================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.7s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out both;
+}
+
+.animate-float {
+  animation: floatSoft 4s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 2.2s ease-in-out infinite;
+}
+
+/* =========================================================
+   PREMIUM CARD HOVER
+   ========================================================= */
+
+.premium-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 40px rgba(30, 58, 95, 0.10);
+  border-color: var(--ink-2);
+}
+
+/* =========================================================
+   PREMIUM BUTTON
+   ========================================================= */
+
+.premium-button {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.premium-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(30, 58, 95, 0.16);
+}
+
+.premium-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   IMAGE / PRODUCT HOVER
+   ========================================================= */
+
+.product-hover {
+  overflow: hidden;
+}
+
+.product-hover img {
+  transition: transform 0.5s ease;
+}
+
+.product-hover:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   SMOOTH LINKS
+   ========================================================= */
+
+.smooth-link {
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.smooth-link:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   PARTS FILTER ANIMATION
+   ========================================================= */
+
+.parts-grid {
+  animation: partsGridIn 0.35s ease both;
+}
+
+@keyframes partsGridIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-chip {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.filter-chip:hover {
+  transform: translateY(-1px);
+}
+
+.product-card {
+  animation: productCardIn 0.4s ease both;
+}
+
+@keyframes productCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-card:nth-child(1) {
+  animation-delay: 0.02s;
+}
+
+.product-card:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.product-card:nth-child(3) {
+  animation-delay: 0.08s;
+}
+
+.product-card:nth-child(4) {
+  animation-delay: 0.11s;
+}
+
+.product-card:nth-child(5) {
+  animation-delay: 0.14s;
+}
+
+.product-card:nth-child(6) {
+  animation-delay: 0.17s;
+}
+
+.product-card:nth-child(7) {
+  animation-delay: 0.20s;
+}
+
+.product-card:nth-child(8) {
+  animation-delay: 0.23s;
+}
+
+/* =========================================================
+   SECTION SCROLL OFFSET
+   Prevent sticky header from covering section headings
+   ========================================================= */
+
+#home,
+#about,
+#services,
+#parts,
+#contact {
+  scroll-margin-top: 150px;
+}
+
+/* =========================================================
+   REDUCE MOTION FOR ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeReverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
